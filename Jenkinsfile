@@ -13,7 +13,6 @@ pipeline {
                 withAWS(region: 'eu-north-1', credentials: 'my-aws-credentials') {
                     s3Upload(
                         bucket: 'htmldeploypoc1',
-                        path: '',
                         file: 'index.html',
                         acl: 'PublicRead'
                     )
