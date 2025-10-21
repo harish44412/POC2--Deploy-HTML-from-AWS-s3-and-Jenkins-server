@@ -14,7 +14,7 @@ pipeline {
                     s3Upload(
                         bucket: 'htmldeploypoc1',
                         path: '',
-                        includePath: '**/*.html',
+                        includePath: 'index.html',
                         acl: 'PublicRead'
                     )
                 }
