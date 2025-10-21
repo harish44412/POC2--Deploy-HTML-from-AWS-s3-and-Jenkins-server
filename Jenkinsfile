@@ -10,7 +10,10 @@ pipeline {
         stage('Deploy to S3') {
             steps {
                 echo 'Deploying to AWS S3...'
-                withAWS(region: 'eu-north-1', credentials: 'my-aws-credentials') {
+                withAWS(region: 'eu-north-1'
+		)withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'my-aws-credentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+    // some block
+} {
                     s3Upload(
                         bucket: 'htmldeploypoc1',
                         file: 'index.html',
