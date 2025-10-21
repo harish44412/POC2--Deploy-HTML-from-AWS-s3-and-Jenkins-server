@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy to S3') {
             steps {
                 echo 'Deploying to AWS S3...'
-                withAWS(region: 'eu-north-1', credentials: 'AKIARBFZBHNQH3BSGRRD') {
+                withAWS(region: 'eu-north-1', credentials: '071255014240') {
                     s3Upload(
                         bucket: 'htmldeploypoc1',
                         path: '',
