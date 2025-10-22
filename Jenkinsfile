@@ -12,7 +12,7 @@ pipeline {
                 echo 'Deploying to AWS S3...'
                 withAWS(region: 'eu-north-1', credentials: 'my-aws-credentials')
 
-} {       sh 'aws s3 sync . s3://my-simple-poc-website'
+ {       sh 'aws s3 sync . s3://my-simple-poc-website'
                     s3Upload(
                         bucket: 'my-simple-poc-website',
                         file: 'index.html',
@@ -21,6 +21,6 @@ pipeline {
                 }
             }
         }
+    }
 }
-
 
