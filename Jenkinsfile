@@ -14,7 +14,7 @@ pipeline {
 
 } {       sh 'aws s3 sync . s3://my-simple-poc-website'
                     s3Upload(
-                        bucket: 'htmldeploypoc1',
+                        bucket: 'my-simple-poc-website',
                         file: 'index.html',
                         acl: 'PublicRead'
                     )
