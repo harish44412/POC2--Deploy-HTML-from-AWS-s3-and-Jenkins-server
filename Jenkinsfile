@@ -12,9 +12,9 @@ pipeline {
                 echo 'Deploying to AWS S3...'
                 withAWS(region: 'eu-north-1', credentials: 'my-aws-credentials')
 
- {       sh 'aws s3 sync . s3://my-simple-poc-website --acl bucket-owner-full-control'
+ {       sh 'aws s3 sync . s3://static-webhosting123 --acl bucket-owner-full-control'
                     s3Upload(
-                        bucket: 'my-simple-poc-website',
+                        bucket: 'static-webhosting123',
                         file: 'index.html',
                         acl: 'PublicRead'
                     )
