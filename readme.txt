@@ -19,3 +19,5 @@
 Create new pipeline
 configure git
 configure webhook
+
+Buil Now, i have not disabled ACL in s3 bucket so the jenkin build will fail
